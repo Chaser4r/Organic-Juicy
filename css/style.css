@@ -1,0 +1,267 @@
+@font-face {
+  font-family: "Geometr231 Hv BT Heavy";
+  src: url(../fonts/geometric231hvbt.ttf);
+}
+@font-face {
+  font-family: "Geometr706 Md BT Medium";
+  src: url(../fonts/geometric706mdbt.ttf);
+}
+:root {
+  --main: rgb(255, 255, 255);
+  --main-dark: rgb(228, 228, 228);
+  --green: rgb(196, 232, 107);
+  --red: rgb(255, 71, 71);
+  --orange: rgb(255, 181, 71);
+  --turquoise: rgb(0, 188, 180);
+  --turquoise-dark: rgb(0, 152, 144);
+}
+
+body {
+  font-family: "Geometr706 Md BT Medium";
+  font-size: 14px;
+}
+
+.container {
+  width: 1920px;
+  margin-block: auto;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 638px 332px 418px 532px;
+      grid-template: 332px 116px 332px/638px 332px 418px 532px;
+      grid-template-areas: "slider-arrows healthy thirsty thirsty" "slider-arrows healthy slider-dots orange" "freshy healthy slider-dots orange";
+}
+
+.btn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 182px;
+  height: 50px;
+  border: 2px solid var(--main);
+  background-color: transparent;
+  color: var(--main);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: background-color 0.18s ease-out, border-color 0.18s ease-out, color 0.18s ease-out;
+  transition: background-color 0.18s ease-out, border-color 0.18s ease-out, color 0.18s ease-out;
+}
+.btn:hover:hover:hover {
+  background-color: var(--main);
+  color: var(--turquoise);
+}
+.btn:active:active:active {
+  background-color: var(--main-dark);
+  color: var(--turquoise-dark);
+  border-color: var(--main-dark);
+}
+
+.btn_absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 638px 332px 852px 98px;
+      grid-template: 112px/638px 332px 852px 98px;
+      grid-template-areas: ". header__logo header__nav header__search";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: start;
+}
+.header .header__logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: header__logo;
+}
+.header .header__nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: header__nav;
+}
+.header .header__nav .header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 64px;
+     -moz-column-gap: 64px;
+          column-gap: 64px;
+}
+.header .header__nav .header__list .header__link {
+  position: relative;
+  padding-block: 6px;
+  text-transform: uppercase;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+.header .header__nav .header__list .header__link:hover {
+  color: var(--turquoise);
+}
+.header .header__nav .header__list .header__link:hover::after {
+  height: 34px;
+}
+.header .header__nav .header__list .header__link:active {
+  color: var(--turquoise-dark);
+}
+.header .header__nav .header__list .header__link::after {
+  content: "";
+  display: block;
+  width: calc(100% + 30px);
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: -41px;
+  background-color: var(--turquoise);
+  -webkit-transition: height 0.22s cubic-bezier(0.25, 1, 0.65, 1);
+  transition: height 0.22s cubic-bezier(0.25, 1, 0.65, 1);
+}
+.header .header__search {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: header__search;
+}
+.header .header__search .header__search-icon {
+  -webkit-transition: fill 0.2s ease-out;
+  transition: fill 0.2s ease-out;
+}
+.header .header__search .header__search-icon:hover {
+  fill: var(--turquoise);
+}
+.header .header__search .header__search-icon:active {
+  fill: var(--turquoise-dark);
+}
+
+.slider-arrows {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: slider-arrows;
+  position: relative;
+}
+.slider-arrows:hover .slider-arrows__imgs-wrapper {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+.slider-arrows:hover .btn {
+  background-color: rgba(0, 0, 0, 0.18);
+}
+.slider-arrows .slider-arrows__imgs-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  -webkit-transition: -webkit-filter 0.18s ease-out;
+  transition: -webkit-filter 0.18s ease-out;
+  transition: filter 0.18s ease-out;
+  transition: filter 0.18s ease-out, -webkit-filter 0.18s ease-out;
+}
+.slider-arrows .slider-arrows__nav {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.slider-arrows .slider-arrows__nav .slider-arrows__left-circle .slider-arrows__left-circle-icon {
+  fill: none;
+}
+.slider-arrows .slider-arrows__nav .slider-arrows__right-circle svg, .slider-arrows .slider-arrows__nav .slider-arrows__left-circle svg {
+  fill: transparent;
+  -webkit-transition: fill 0.18s ease-out;
+  transition: fill 0.18s ease-out;
+}
+.slider-arrows .slider-arrows__nav .slider-arrows__right-circle path, .slider-arrows .slider-arrows__nav .slider-arrows__left-circle path {
+  -webkit-transition: stroke 0.18s ease-out;
+  transition: stroke 0.18s ease-out;
+}
+.slider-arrows .slider-arrows__nav .slider-arrows__right-circle path:last-of-type, .slider-arrows .slider-arrows__nav .slider-arrows__left-circle path:last-of-type {
+  fill: transparent;
+}
+.slider-arrows .slider-arrows__nav .slider-arrows__right-circle:hover > svg, .slider-arrows .slider-arrows__nav .slider-arrows__left-circle:hover > svg {
+  fill: var(--main);
+}
+.slider-arrows .slider-arrows__nav .slider-arrows__right-circle:hover > svg path:last-of-type, .slider-arrows .slider-arrows__nav .slider-arrows__left-circle:hover > svg path:last-of-type {
+  stroke: var(--turquoise);
+}
+.slider-arrows .slider-arrows__nav .slider-arrows__right-circle:active > svg, .slider-arrows .slider-arrows__nav .slider-arrows__left-circle:active > svg {
+  fill: var(--main-dark);
+}
+.slider-arrows .slider-arrows__nav .slider-arrows__right-circle:active > svg path:nth-of-type(2), .slider-arrows .slider-arrows__nav .slider-arrows__left-circle:active > svg path:nth-of-type(2) {
+  stroke: var(--main-dark);
+}
+.slider-arrows .slider-arrows__nav .slider-arrows__right-circle:active > svg path:last-of-type, .slider-arrows .slider-arrows__nav .slider-arrows__left-circle:active > svg path:last-of-type {
+  stroke: var(--turquoise-dark);
+}
+
+.slider-dots {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: slider-dots;
+  position: relative;
+}
+.slider-dots:hover .slider-dots__imgs-wrapper {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+.slider-dots:hover .btn {
+  background-color: rgba(0, 0, 0, 0.18);
+}
+.slider-dots .slider-dots__imgs-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  -webkit-transition: -webkit-filter 0.18s ease-out;
+  transition: -webkit-filter 0.18s ease-out;
+  transition: filter 0.18s ease-out;
+  transition: filter 0.18s ease-out, -webkit-filter 0.18s ease-out;
+}
+.slider-dots .slider-dots__nav {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 62px;
+  left: 50%;
+  bottom: 60px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.slider-dots .slider-dots__nav .slider-dots__nav-item {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid var(--main);
+  border-radius: 50%;
+}
+.slider-dots .slider-dots__nav .slider-dots__nav-item_active {
+  background-color: var(--main);
+}

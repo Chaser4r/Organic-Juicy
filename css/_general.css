@@ -1,0 +1,61 @@
+:root {
+  --main: rgb(255, 255, 255);
+  --main-dark: rgb(228, 228, 228);
+  --green: rgb(196, 232, 107);
+  --red: rgb(255, 71, 71);
+  --orange: rgb(255, 181, 71);
+  --turquoise: rgb(0, 188, 180);
+  --turquoise-dark: rgb(0, 152, 144);
+}
+
+body {
+  font-family: "Geometr706 Md BT Medium";
+  font-size: 14px;
+}
+
+.container {
+  width: 1920px;
+  margin-block: auto;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 638px 332px 418px 532px;
+      grid-template: 332px 116px 332px/638px 332px 418px 532px;
+      grid-template-areas: "slider-arrows healthy thirsty thirsty" "slider-arrows healthy slider-dots orange" "freshy healthy slider-dots orange";
+}
+
+.btn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 182px;
+  height: 50px;
+  border: 2px solid var(--main);
+  background-color: transparent;
+  color: var(--main);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: background-color 0.18s ease-out, border-color 0.18s ease-out, color 0.18s ease-out;
+  transition: background-color 0.18s ease-out, border-color 0.18s ease-out, color 0.18s ease-out;
+}
+.btn:hover:hover:hover {
+  background-color: var(--main);
+  color: var(--turquoise);
+}
+.btn:active:active:active {
+  background-color: var(--main-dark);
+  color: var(--turquoise-dark);
+  border-color: var(--main-dark);
+}
+
+.btn_absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
