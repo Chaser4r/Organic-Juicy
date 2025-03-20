@@ -1,0 +1,228 @@
+.footer {
+  grid-area: footer;
+  background-color: #2F2F2F;
+
+  display: grid;
+  grid-template: 256px auto / 281px 357px 332px 418px;
+  grid-template-areas:
+    ". socials form logo"
+    ". . . copy";
+  align-items: end;
+  
+  .footer__socials {
+    grid-area: socials;
+
+    .footer__social-list {
+      display: flex;
+      gap: 17px;
+
+      .footer__social-item {
+        .footer__social-link {
+          svg :is(circle, rect, path) {
+            transition: fill .18s ease-out, stroke .18s ease-out;
+          }
+
+          svg > g > circle {
+            fill: transparent;
+            stroke: var(--main);
+          }
+          
+          &:hover > svg > g > circle {
+            fill: var(--main)
+          }
+
+          &:active > svg > g > circle {
+            fill: var(--main-dark);
+            stroke: var(--main-dark)
+          }
+        }
+
+        .footer__social-link_name_instagram {   
+          svg path { 
+            &:first-of-type {
+              fill: var(--main);
+            }
+
+            &:nth-of-type(2) {
+              stroke: var(--main)
+            }
+
+            &:nth-of-type(3) {
+              fill: var(--gray-dark);
+            }
+
+            &:nth-of-type(4) {
+              stroke: var(--gray-dark);
+            }
+    
+            &:last-of-type {
+              fill: var(--gray-dark);
+              stroke: var(--gray-dark);
+            }
+          }      
+    
+          &:hover > svg {              
+            path { 
+              &:first-of-type {
+                fill: var(--turquoise);
+              }
+  
+              &:nth-of-type(2) {
+                stroke: var(--turquoise);
+              }
+  
+              &:nth-of-type(3) {
+                fill: var(--main);
+              }
+  
+              &:nth-of-type(4) {
+                stroke: var(--main);
+              }
+      
+              &:last-of-type {
+                fill: var(--main);
+                stroke: var(--main);
+              }
+            }
+          }
+    
+          &:active > svg {
+            path { 
+              &:first-of-type {
+                fill: var(--turquoise-dark);
+              }
+  
+              &:nth-of-type(2) {
+                stroke: var(--turquoise-dark);
+              }
+  
+              &:nth-of-type(3) {
+                fill: var(--main-dark);
+              }
+  
+              &:nth-of-type(4) {
+                stroke: var(--main-dark);
+              }
+      
+              &:last-of-type {
+                fill: var(--main-dark);
+                stroke: var(--main-dark);
+              }
+            }
+          }
+        }
+
+        .footer__social-link_name_twitter, .footer__social-link_name_facebook {
+          svg path {
+            fill: var(--main);
+            stroke: var(--main);
+          }            
+
+          &:hover > svg {
+            path {
+              fill: var(--turquoise);
+              stroke: var(--turquoise);
+            }
+          }
+
+          &:active > svg {
+            path {
+              fill: var(--turquoise-dark);
+              stroke: var(--turquoise-dark);
+            }
+          }
+        }
+
+        .footer__social-link_name_linkedin {
+          svg {            
+            > g > g > :is(circle, rect, path) {
+              fill: var(--main);
+              stroke: var(--main);
+            }
+          }
+
+          &:hover > svg {           
+            > g > g > :is(circle, rect, path) {
+              fill: var(--turquoise);
+              stroke: var(--turquoise);
+            }
+          }
+
+          &:active > svg {           
+            > g > g > :is(circle, rect, path) {
+              fill: var(--turquoise-dark);
+              stroke: var(--turquoise-dark);
+            }
+          }
+        }
+      }      
+    }   
+  }
+  
+  .footer__form.form {
+    grid-area: form;
+    text-transform: uppercase;
+    font-size: 0;
+
+    .form__title {
+      display: block;
+      color: var(--main);
+      font-size: 20px;
+      line-height: 1.3;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .form__input {
+      font-size: 14px;
+      width: 234px;
+      height: 42px;
+      padding-inline: 24px;
+    }
+
+    .form__submit {
+      width: 98px;
+      height: 42px;
+      background-color: var(--turquoise);
+      color: var(--main);
+      font-size: 14px;
+      letter-spacing: 1px;
+
+      transition: background-color .18s ease-out, color .18s ease-out;
+
+      &:hover {
+        background-color: var(--main);
+        color: var(--turquoise);
+      }
+
+      &:active {
+        background-color: var(--main-dark);
+        color: var(--turquoise-dark);
+      }
+    }
+  }
+  
+  .footer__logo {
+    grid-area: logo;
+    position: relative;
+    justify-self: right;
+    right: 116px;
+    bottom: -15px;
+
+    :is(ellipse, path) {
+      fill: var(--gray);
+    }
+  }
+
+  .footer__copy {
+    grid-area: copy;
+    justify-self: right;
+    position: relative;
+    margin-bottom: 44px;
+    margin-right: 77px;
+
+    color: var(--gray);
+    font-family: Inter;
+    font-size: 11px;
+  }
+}

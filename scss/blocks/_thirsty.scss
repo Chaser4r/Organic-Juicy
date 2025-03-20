@@ -1,0 +1,21 @@
+.thirsty {
+  grid-area: thirsty;
+  background-color: var(--orange);
+  flex-direction: row-reverse;
+  justify-content: start;
+  column-gap: 70px;
+
+  .thirsty__title {    
+    span {
+      left: -2px;
+    }
+  }
+  
+  .thirsty__desc {    
+    max-width: 348px;
+    padding-left: 120px;
+    text-align: right;
+  }
+}
+
+

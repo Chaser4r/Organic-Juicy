@@ -1,0 +1,6 @@
+.down-wrapper {
+  display: grid;
+  grid-template: 386px / auto 532px;
+  grid-template-areas:
+    "footer juicy";
+}

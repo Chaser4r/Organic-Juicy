@@ -1,0 +1,8 @@
+.main {
+  display: grid;
+  grid-template: 332px 116px 332px / 638px 332px 418px 532px;
+  grid-template-areas:
+    "slider-arrows healthy thirsty thirsty"
+    "slider-arrows healthy slider-dots orange"
+    "freshy healthy slider-dots orange";  
+}

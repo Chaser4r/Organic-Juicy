@@ -1,0 +1,33 @@
+.orange {
+  grid-area: orange;
+
+  .orange__imgs-wrapper {
+    .orange__img {
+    }
+  }
+  
+  .orange__btn {
+    &:hover:hover:hover {
+      color: var(--orange);
+    }
+  
+    &:active:active:active {
+      color: var(--orange-dark);
+    }
+  }
+  
+  .orange__arrow {
+    position: absolute;
+    bottom: 35px;
+    right: 70px;
+
+    path {
+      transition: fill .18s ease-out;
+      fill: var(--main);
+    }
+
+    &:active path {
+      fill: var(--main-dark);
+    }
+  }
+}

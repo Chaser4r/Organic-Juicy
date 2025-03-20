@@ -1,11 +1,16 @@
 :root {
   --main: rgb(255, 255, 255);
-  --main-dark: rgb(228, 228, 228);
+  --main-dark: rgb(230, 230, 230);
   --green: rgb(196, 232, 107);
+  --green-dark: rgb(169, 200, 107);
   --red: rgb(255, 71, 71);
+  --red-dark: rgb(228, 71, 71);
   --orange: rgb(255, 181, 71);
+  --orange-dark: rgb(228, 152, 71);
   --turquoise: rgb(0, 188, 180);
   --turquoise-dark: rgb(0, 152, 144);
+  --gray: rgb(106, 106, 106);
+  --gray-dark: rgb(47, 47, 47);
 }
 
 body {
@@ -18,12 +23,68 @@ body {
   margin-block: auto;
 }
 
-.main {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 638px 332px 418px 532px;
-      grid-template: 332px 116px 332px/638px 332px 418px 532px;
-      grid-template-areas: "slider-arrows healthy thirsty thirsty" "slider-arrows healthy slider-dots orange" "freshy healthy slider-dots orange";
+.img-section {
+  position: relative;
+}
+.img-section:hover .imgs-wrapper {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+.img-section:hover .btn {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.imgs-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+  -webkit-transition: -webkit-filter 0.18s ease-out;
+  transition: -webkit-filter 0.18s ease-out;
+  transition: filter 0.18s ease-out;
+  transition: filter 0.18s ease-out, -webkit-filter 0.18s ease-out;
+}
+.text-section {
+  padding: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 60px;
+  color: var(--main);
+}
+.text-section .text-section__title {
+  max-width: 190px;
+  font-size: 22px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.text-section .text-section__title span {
+  display: inline-block;
+  font-family: "Geometr706 Md BT Medium";
+  font-size: 66px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  -ms-hyphens: manual;
+      hyphens: manual;
+  position: relative;
+  left: -4px;
+}
+.text-section .text-section__title span::first-line {
+  font-family: "Geometr231 Hv BT Heavy";
+  font-size: 78px;
+  letter-spacing: normal;
+}
+.text-section .text-section__desc {
+  font-size: 14px;
+  line-height: 1.4;
+  -ms-hyphens: auto;
+      hyphens: auto;
 }
 
 .btn {
@@ -44,12 +105,18 @@ body {
 }
 .btn:hover:hover:hover {
   background-color: var(--main);
-  color: var(--turquoise);
 }
 .btn:active:active:active {
   background-color: var(--main-dark);
-  color: var(--turquoise-dark);
   border-color: var(--main-dark);
+}
+
+.btn_rounded {
+  width: 85px;
+  height: 40px;
+  border-radius: 25px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
 }
 
 .btn_absolute {

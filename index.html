@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Organic Juicy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
   <!-- <link rel="preconnect" href="https://db.onlinewebfonts.com"> -->
   <!-- <link href="https://db.onlinewebfonts.com/c/ac3396b11d8d991783e25661db17ceaf?family=Geometr231+Hv+BT+Heavy" rel="stylesheet"> -->
     <!-- font-family: "Geometr231 Hv BT Heavy"; -->
@@ -31,9 +34,10 @@
         </svg>
       </button>
     </header>
+
     <main class="main">
-      <div class="slider-arrows">
-        <div class="slider-arrows__imgs-wrapper">
+      <div class="slider-arrows img-section">
+        <div class="slider-arrows__imgs-wrapper imgs-wrapper">
           <img src="images/slider-arrows_img1.jpeg" alt="Яблоки" class="slider-arrows__img">
         </div>
         <div class="slider-arrows__nav">
@@ -52,7 +56,7 @@
               </g>
             </svg>
           </button>
-          <button class="btn">Start drinking</button>
+          <button class="slider-arrows__btn btn">Start drinking</button>
           <button class="slider-arrows__right-circle">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50.000000" height="50.000000" viewBox="0 0 50 50">
               <defs>
@@ -70,18 +74,179 @@
           </button>
         </div>
       </div>
-      <div class="slider-dots">
-        <div class="slider-dots__imgs-wrapper">
+
+      <div class="slider-dots img-section">
+        <div class="slider-dots__imgs-wrapper imgs-wrapper">
           <img class="slider-dots__img" src="./images/slider-dots_img1.jpeg" alt="Морковь">
         </div>
-        <button class="btn btn_absolute">Start drinking</button>
+        <button class="slider-dots__btn btn btn_absolute">Start drinking</button>
         <div class="slider-dots__nav">
           <button class="slider-dots__nav-item slider-dots__nav-item_active"></button>
           <button class="slider-dots__nav-item"></button>
           <button class="slider-dots__nav-item"></button>
         </div>
       </div>
+
+      <div class="orange img-section">
+        <div class="orange__imgs-wrapper imgs-wrapper">
+          <img class="orange__img" src="./images/img-oranges.jpeg" alt="Апельсины">
+        </div>
+        <button class="orange__btn btn btn_absolute">Start drinking</button>
+        <button class="orange__arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63.000000" height="33.000000" viewBox="0 0 63 33" fill="none">
+            <defs>
+              <clipPath id="clip5_52">
+                <rect id="iwwa--arrow-right" width="63.000000" height="33.000000" fill-opacity="0"/>
+              </clipPath>
+            </defs>
+            <g clip-path="url(#clip5_52)">
+              <path id="path" d="M45.39 32.74C45.7 32.74 45.95 32.64 46.16 32.44L61.86 17.22C62.33 16.76 62.33 16.29 61.86 15.83L46.09 0.55C45.6 0.03 45.09 0.02 44.56 0.5C44.03 0.97 44.03 1.45 44.56 1.93L59.61 16.52L44.62 31.06C44.3 31.37 44.23 31.73 44.41 32.14C44.6 32.54 44.92 32.74 45.39 32.74Z" fill-opacity="1.000000" fill-rule="nonzero"/>
+              <path id="path" d="M1.43 17.55L59.17 17.55C59.97 17.55 60.37 17.21 60.37 16.55C60.37 15.88 59.97 15.55 59.17 15.55L1.43 15.55C0.64 15.55 0.24 15.88 0.24 16.55C0.24 17.21 0.64 17.55 1.43 17.55Z" fill-opacity="1.000000" fill-rule="nonzero"/>
+            </g>
+          </svg>
+        </button>
+      </div>
+
+      <div class="freshy text-section">
+        <h4 class="freshy__title text-section__title">Go green and stay <span>fre&shy;shy</span></h4>
+        <div class="freshy__desc text-section__desc">Lorem ipsum dolor sit, amet consectetuert adipisicing elit. Tempora, iste aut, inventore quae voluptatem quam accusantium ipsam vitae pariatur eius adipisci similique cupiditate! Dolores eos libero natus quos obcaecati id ipsam iste consequatur mollitia at alias voluptate sunt reiciendis tenetur quaerat eaque, sequi itaque esse.</div>
+      </div>
+      
+      <div class="healthy text-section">
+        <h4 class="healhty__title text-section__title">Worry less drink<span>hea&shy;lthy</span></h4>
+        <div class="healhty__desc text-section__desc">Lorem ipsum dolor sit, amet consectetuert eset adipisicing elit. Tempora, iste es aut, inventore quae voluptatem quam accusantium ipsam vitae pariatur eius adipisci similique cupiditate! Dolores eos libero natus quos obcaecati id ipsam iste</div>
+      </div>
+
+      <div class="thirsty text-section">
+        <h4 class="thirsty__title text-section__title">Are you summer<span>thir&shy;sty?</span></h4>
+        <div class="thirsty__desc text-section__desc">Lorem ipsum dolor sit, amet consectetuert adipisicing elit. Tempora, iste aut, inventore quae voluptatem quam accusantium ipsam vitae pariatur eius adipisci similique cupiditate! Dolores eos libero natus quos obcaecati emb</div>
+      </div>
     </main>
+
+    <div class="down-wrapper">
+      <footer class="footer">
+        <address class="footer__socials">
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a class="footer__social-link footer__social-link_name_instagram" href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42.000000" height="42.000000" viewBox="0 0 42 42" fill="none">
+                  <defs>
+                    <clipPath id="clip55_88">
+                      <rect id="instagram" width="22.000000" height="22.000000" transform="translate(10.000000 10.000000)" fill="none" fill-opacity="0"/>
+                    </clipPath>
+                    <clipPath id="clip55_33">
+                      <rect id="Frame 4" width="42.000000" height="42.000000" fill="none" fill-opacity="0"/>
+                    </clipPath>
+                  </defs>
+                  <g clip-path="url(#clip55_33)">
+                    <circle id="Oval 2" cx="21.000000" cy="21.000000" r="20.000000" fill-opacity="1" stroke-opacity="1.000000" stroke-width="2.000000"/>
+                    <g clip-path="url(#clip55_88)">
+                      <path id="path" d="M25.58 12.75L16.41 12.75C14.39 12.75 12.75 14.39 12.75 16.41L12.75 25.58C12.75 27.6 14.39 29.25 16.41 29.25L25.58 29.25C27.6 29.25 29.25 27.6 29.25 25.58L29.25 16.41C29.25 14.39 27.6 12.75 25.58 12.75Z" fill-opacity="1" fill-rule="nonzero"/>
+                      <path id="path" d="M16.41 12.75C14.39 12.75 12.75 14.39 12.75 16.41L12.75 25.58C12.75 27.6 14.39 29.25 16.41 29.25L25.58 29.25C27.6 29.25 29.25 27.6 29.25 25.58L29.25 16.41C29.25 14.39 27.6 12.75 25.58 12.75L16.41 12.75Z" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
+                      <path id="path" d="M21 24.66C23.02 24.66 24.66 23.02 24.66 21C24.66 18.97 23.02 17.33 21 17.33C18.97 17.33 17.33 18.97 17.33 21C17.33 23.02 18.97 24.66 21 24.66Z" fill="green" fill-opacity="1" fill-rule="nonzero"/>
+                      <path id="path" d="M24.66 21C24.66 18.97 23.02 17.33 21 17.33C18.97 17.33 17.33 18.97 17.33 21C17.33 23.02 18.97 24.66 21 24.66C23.02 24.66 24.66 23.02 24.66 21Z" stroke="orange" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
+                      <path id="path" d="M26.04 16.87C26.54 16.87 26.95 16.46 26.95 15.95C26.95 15.45 26.54 15.04 26.04 15.04C25.53 15.04 25.12 15.45 25.12 15.95C25.12 16.46 25.53 16.87 26.04 16.87Z" stroke-width="0.3" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link footer__social-link_name_twitter" href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42.000000" height="42.000000" viewBox="0 0 42 42" fill="none">
+                  <defs>
+                    <clipPath id="clip55_82">
+                      <rect id="Twitter" width="22.000000" height="22.000000" transform="translate(10.000000 10.000000)" fill="white" fill-opacity="0"/>
+                    </clipPath>
+                    <clipPath id="clip55_44">
+                      <rect id="Frame 4" width="42.000000" height="42.000000" fill="white" fill-opacity="0"/>
+                    </clipPath>
+                  </defs>
+                  <g clip-path="url(#clip55_44)">
+                    <circle id="Oval 2" cx="21.000000" cy="21.000000" r="20.000000" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000"/>
+                    <g clip-path="url(#clip55_82)">
+                      <path id="path" d="M12.29 26.39C13.17 26.87 19.57 30.56 24.12 27.72C28.67 24.88 28.42 19.98 28.42 17.73C28.83 16.87 29.7 16.43 29.7 14.09C28.85 14.88 28 15.15 27.15 14.9C26.32 13.64 25.19 13.08 23.74 13.23C21.56 13.44 20.76 15.58 21 18.34C17.64 20.04 15.01 17.11 13.66 14.9C13.21 16.64 12.77 18.73 13.66 21.04C14.25 22.58 15.68 23.88 17.94 24.95C15.65 26.19 13.76 26.67 12.29 26.39Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                      <path id="path" d="M24.12 27.72C28.67 24.88 28.42 19.98 28.42 17.73C28.83 16.87 29.7 16.43 29.7 14.09C28.85 14.88 28 15.15 27.15 14.9C26.32 13.64 25.19 13.08 23.74 13.23C21.56 13.44 20.76 15.58 21 18.34C17.64 20.04 15.01 17.11 13.66 14.9C13.21 16.64 12.77 18.73 13.66 21.04C14.25 22.58 15.68 23.88 17.94 24.95C15.65 26.19 13.76 26.67 12.29 26.39C13.17 26.87 19.57 30.56 24.12 27.72Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.375000" stroke-linejoin="round"/>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link footer__social-link_name_facebook" href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42.000000" height="42.000000" viewBox="0 0 42 42" fill="none">
+                  <defs>
+                    <clipPath id="clip55_80">
+                      <rect id="Facebook" width="22.000000" height="22.000000" transform="translate(10.000000 10.000000)" fill="none" fill-opacity="0"/>
+                    </clipPath>
+                    <clipPath id="clip55_56">
+                      <rect id="Frame 4" width="42.000000" height="42.000000" fill="none" fill-opacity="0"/>
+                    </clipPath>
+                  </defs>
+                  <g clip-path="url(#clip55_56)">
+                    <circle id="Oval 2" cx="21.000000" cy="21.000000" r="20.000000" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000"/>
+                    <g clip-path="url(#clip55_80)">
+                      <path id="path" d="M26.5 15.77L24.32 15.77L23.74 15.77C23.24 15.77 22.84 16.17 22.84 16.67L22.84 19.83L26.5 19.83L25.96 23.32L22.84 23.32L22.84 29.7L18.82 29.7L18.82 23.32L15.5 23.32L15.5 19.83L18.77 19.83L18.82 16.53L18.81 15.93C18.79 13.94 20.39 12.31 22.38 12.29L26.5 12.29L26.5 15.77Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                      <path id="path" d="M24.32 15.77L23.74 15.77C23.24 15.77 22.84 16.17 22.84 16.67L22.84 19.83L26.5 19.83L25.96 23.32L22.84 23.32L22.84 29.7L18.82 29.7L18.82 23.32L15.5 23.32L15.5 19.83L18.77 19.83L18.82 16.53L18.81 15.93C18.79 13.94 20.39 12.31 22.38 12.29L26.5 12.29L26.5 15.77L24.32 15.77Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.375000" stroke-linejoin="round"/>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link footer__social-link_name_linkedin" href="#!">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42.000000" height="42.000000" viewBox="0 0 42 42" fill="none">
+                  <defs>
+                    <clipPath id="clip55_76">
+                      <rect id="instagram" width="22.000000" height="22.000000" transform="translate(10.000000 10.000000)" fill="none" fill-opacity="0"/>
+                    </clipPath>
+                    <clipPath id="clip55_54">
+                      <rect id="Frame 4" width="42.000000" height="42.000000" fill="none" fill-opacity="0"/>
+                    </clipPath>
+                  </defs>
+                  <g clip-path="url(#clip55_54)">
+                    <circle id="Oval 2" cx="21.000000" cy="21.000000" r="20.000000" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000"/>
+                    <g clip-path="url(#clip55_76)">
+                      <circle id="circle" cx="14.125000" cy="13.666687" r="1.833333" fill-opacity="1.000000"/>
+                      <circle id="circle" cx="14.125000" cy="13.666687" r="1.833333" stroke-opacity="1.000000" stroke-width="1.375000"/>
+                      <rect id="rect" x="12.291504" y="18.250061" width="3.666667" height="11.458334" fill-opacity="1.000000"/>
+                      <rect id="rect" x="12.291504" y="18.250061" width="3.666667" height="11.458334" stroke-opacity="1.000000" stroke-width="1.375000" stroke-linejoin="round"/>
+                      <path id="path" d="M19.62 22.6L19.62 29.7L22.83 29.7L22.83 23.29C22.83 22.14 23.52 21.22 24.66 21.22C25.81 21.22 26.5 22.37 26.5 23.29L26.5 29.7L29.7 29.7L29.7 22.6C29.7 21.22 28.1 18.25 24.66 18.25C21.22 18.25 19.62 21.22 19.62 22.6Z" fill-opacity="1.000000" fill-rule="nonzero"/>
+                      <path id="path" d="M19.62 29.7L22.83 29.7L22.83 23.29C22.83 22.14 23.52 21.22 24.66 21.22C25.81 21.22 26.5 22.37 26.5 23.29L26.5 29.7L29.7 29.7L29.7 22.6C29.7 21.22 28.1 18.25 24.66 18.25C21.22 18.25 19.62 21.22 19.62 22.6L19.62 29.7Z" stroke-opacity="1.000000" stroke-width="1.375000" stroke-linejoin="round"/>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </address>
+        <form action="#!" class="footer__form form">
+          <label class="form__title" for="email">Sing up<br>for a new new</label>
+          <input class="form__input" type="email" id="email" placeholder="Your email">
+          <button class="form__submit" type="submit">Submit</button>
+        </form>
+        <svg class="footer__logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46.000000" height="69.000000" viewBox="0 0 46 69" fill="none">
+          <defs>
+            <clipPath id="clip54_19">
+              <rect id="Frame 3" width="46.000000" height="69.000000" fill="white" fill-opacity="0"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#clip54_19)">
+            <ellipse id="Oval 1" cx="11.500000" cy="34.500000" rx="11.500000" ry="11.500002" fill-opacity="1.000000"/>
+            <ellipse id="Oval 1" cx="40.250000" cy="5.750000" rx="5.750000" ry="5.750001" fill-opacity="1.000000"/>
+            <path id="Oval 1" d="M46 34.5C46 40.78 44.31 46.67 41.37 51.74C38.23 57.18 33.83 61.44 28.75 64.37C23.31 67.51 17.36 69 11.5 69L11.5 57.49C15.68 57.49 19.61 56.37 22.99 54.41C26.62 52.32 29.46 49.38 31.41 45.99C33.5 42.37 34.5 38.41 34.49 34.5L46 34.5Z" fill-opacity="1.000000" fill-rule="evenodd"/>
+          </g>
+        </svg>
+        <small class="footer__copy">© 2025. All right reserved.</small>
+      </footer>
+
+      <section class="juicy text-section">
+        <h4 class="juicy__title text-section__title">Now try out our<span>jui&shy;sy</span></h4>
+        <div class="juicy__desc text-section__desc">Lorem ipsum dolor sit, amet consectetuert adipisicing elit. Tempora, iste aut, inventore quae voluptatem quam accusantium ipsam vitae pariatur eius adipisci similique cuwix
+          <button class="juicy__btn btn btn_rounded">More</button>
+        </div>       
+      </section>
+    </div>
   </div>
 </body>
 </html>

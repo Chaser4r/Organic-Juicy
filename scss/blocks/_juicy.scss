@@ -1,0 +1,25 @@
+.juicy {
+  grid-area: juicy;
+  position: relative;
+  background-color: var(--turquoise);
+
+  .juicy__title {
+  }
+  
+  .juicy__desc {
+  }
+  
+  .juicy__btn {
+    margin-top: 33px;
+
+    &:hover:hover:hover {
+      color: var(--turquoise);
+    }
+  
+    &:active:active:active {
+      color: var(--turquoise-dark);
+    }
+  }  
+}
+
+
