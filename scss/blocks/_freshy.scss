@@ -1,4 +1,34 @@
 .freshy {
   grid-area: freshy;
   background-color: var(--green);
+
+  @media (min-width: 951px) and (max-width: 1281px) {
+    column-gap: calc(calc(332px * $scope-1282) - calc(70px * $scope-1282) - calc(151px * $scope-1282));
+  }
+
+  // @media (min-width: 533px) and (max-width: 950px) {
+  //   column-gap: calc(calc(332px * $scope-950) - calc(70px * $scope-950) - calc(151px * $scope-950));
+  // }
+
+  // @media (max-width: 532px) {
+  //   column-gap: calc(calc(332px * $scope-532) - calc(70px * $scope-532) - calc(151px * $scope-532));
+  // }
+
+  .freshy__desc {
+    @media (min-width: 951px) and (max-width: 1282px) {
+      padding-right: calc(120px * $scope-1282);
+    }
+
+    // @media (min-width: 533px) and (max-width: 950px) {
+    //   padding-right: calc(120px * $scope-950)
+    // }
+  
+    // @media (max-width: 532px) {
+    //   padding-right: calc(120px * $scope-532)
+    // }
+  }
+
+  .freshy__title {
+    
+  }
 }

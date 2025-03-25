@@ -21,13 +21,63 @@
     bottom: 35px;
     right: 70px;
 
-    path {
-      transition: fill .18s ease-out;
-      fill: var(--main);
+    @media (min-width: 1282px) and (max-width: 1920px) {
+      bottom: calc(35px * $scope);
+      right: calc(70px * $scope);
+      height: calc(33px * $scope);
     }
 
-    &:active path {
-      fill: var(--main-dark);
+    @media (min-width: 951px) and (max-width: 1282px) {
+      bottom: calc(35px * $scope-1282);
+      right: calc(70px * $scope-1282);
+      height: calc(33px * $scope-1282);
+    }
+
+    @media (min-width: 533px) and (max-width: 950px) {
+      bottom: calc(35px * $scope-950);
+      right: calc(70px * $scope-950);
+      height: calc(33px * $scope-950);
+    }
+  
+    @media (max-width: 532px) {
+      bottom: calc(35px * $scope-532);
+      right: calc(35px * $scope-532);
+      height: calc(33px * $scope-532);
+    }
+
+    svg {
+      width: 63px;
+      height: 33px;
+
+      @media (min-width: 1282px) and (max-width: 1920px) {
+        width: calc(63px * $scope);
+        height: calc(33px * $scope);
+      }
+
+      @media (min-width: 951px) and (max-width: 1282px) {
+        width: calc(63px * $scope-1282);
+        height: calc(33px * $scope-1282);
+      }
+
+      @media (min-width: 533px) and (max-width: 950px) {
+        width: calc(63px * $scope-950);
+        height: calc(33px * $scope-950);
+      }
+    
+      @media (max-width: 532px) {
+        width: calc(63px * $scope-532);
+        height: calc(33px * $scope-532);
+      }
+
+      
+      path {
+        transition: fill .18s ease-out;
+        fill: var(--main);
+      }
+  
+      &:active path {
+        fill: var(--main-dark);
+      }
     }
   }
 }

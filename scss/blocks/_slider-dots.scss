@@ -25,6 +25,26 @@
     bottom: 60px;
     transform: translateX(-50%);
 
+    @media (min-width: 1282px) and (max-width: 1920px) {
+      width: calc(62px * $scope);
+      bottom: calc(60px * $scope);
+    }
+
+    @media (min-width: 951px) and (max-width: 1282px) {
+      width: calc(62px * $scope-1282);
+      bottom: calc(60px * $scope-1282);
+    }
+
+    @media (min-width: 533px) and (max-width: 950px) {
+      width: calc(62px * $scope-950);
+      bottom: calc(60px * $scope-950);
+    }
+  
+    @media (max-width: 532px) {
+      width: calc(62px * $scope-532);
+      bottom: calc(60px * $scope-532);
+    }
+    
     .slider-dots__nav-item {
       display: inline-block;
       width: 13px;
@@ -32,6 +52,30 @@
       box-sizing: border-box;
       border: 2px solid var(--main);
       border-radius: 50%;
+
+      @media (min-width: 1282px) and (max-width: 1920px) {
+        width: calc(13px * $scope);
+        height: calc(13px * $scope);
+        border-width: calc(2px * $scope);
+      }
+
+      @media (min-width: 951px) and (max-width: 1282px) {
+        width: calc(13px * $scope-1282);
+        height: calc(13px * $scope-1282);
+        border-width: calc(2px * $scope-1282);
+      }
+
+      @media (min-width: 533px) and (max-width: 950px) {
+        width: calc(13px * $scope-950);
+        height: calc(13px * $scope-950);
+        border-width: calc(2px * $scope-950);
+      }
+    
+      @media (max-width: 532px) {
+        width: calc(13px * $scope-532);
+        height: calc(13px * $scope-532);
+        border-width: calc(2px * $scope-532);
+      }
     }
     .slider-dots__nav-item_active {
       background-color: var(--main);

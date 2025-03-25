@@ -3,6 +3,33 @@
   position: relative;
   background-color: var(--turquoise);
 
+  @media (min-width: 533px) and (max-width: 1282px) {
+    flex-direction: column-reverse;
+  }
+
+  @media (max-width: 532px) {
+    column-gap: calc(35px * $scope-532)
+  }
+
+  .juicy__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 33px;
+
+    @media (min-width: 1283px) and (max-width: 1920px) {
+      row-gap: calc(33px * $scope);
+    }
+
+    @media (min-width: 533px) and (max-width: 1282px) {
+      flex-direction: column-reverse;
+      row-gap: calc(33px * $scope-1282);
+    }
+
+    @media (max-width: 532px) {
+      row-gap: calc(33px * $scope-532);
+    }
+  }
+
   .juicy__title {
   }
   
@@ -10,8 +37,6 @@
   }
   
   .juicy__btn {
-    margin-top: 33px;
-
     &:hover:hover:hover {
       color: var(--turquoise);
     }
@@ -20,6 +45,18 @@
       color: var(--turquoise-dark);
     }
   }  
+}
+
+.juicy_main {
+  @media (min-width: 1282px) {
+    display: none;
+  }
+}
+
+.juicy_footer {
+  @media (max-width: 1282px) {
+    display: none;
+  }
 }
 
 

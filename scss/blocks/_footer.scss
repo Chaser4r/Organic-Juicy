@@ -3,28 +3,146 @@
   background-color: #2F2F2F;
 
   display: grid;
-  grid-template: 256px auto / 281px 357px 332px 418px;
+  grid-template-rows: 256px 130px;
+  grid-template-columns: 281px 357px 332px 418px;
   grid-template-areas:
     ". socials form logo"
     ". . . copy";
   align-items: end;
+
+  @media (min-width: 1283px) and (max-width: 1920px) {
+    grid-template-rows: calc(256px * $scope) calc(130px * $scope);
+    grid-template-columns: calc(281px * $scope) calc(357px * $scope) calc(332px * $scope) calc(418px * $scope);
+  }
+
+  @media (min-width: 950px) and (max-width: 1282px) {
+    max-width: calc(1282px * $scope-1282);
+    grid-template-rows: calc(256px * $scope-1282) calc(130px * $scope-1282);
+    grid-template-columns: calc(70px * $scope-1282) calc(262px * $scope-1282) calc(418px * $scope-1282) calc(532px * $scope-1282);    
+    grid-template-areas:
+      ". socials form logo"
+      ". . . copy";
+  }
+
+  @media (min-width: 533px) and (max-width: 950px) {
+    max-width: calc(950px * $scope-950);
+    grid-template-rows: calc(256px * $scope-950) calc(206px * $scope-950) calc(130px * $scope-950);
+    grid-template-columns: calc(70px * $scope-950) calc(348px * $scope-950) calc(70px * $scope-950) calc(392px * $scope-950) calc(70px * $scope-950);    
+    grid-template-areas:
+      ". socials . form ."
+      ". . .logo ."
+      ". . . copy .";
+  }
+
+  @media (max-width: 532px) {
+    max-width: calc(532px * $scope-532);
+    grid-template-rows: calc(240px * $scope-532) calc(170px * $scope-532) calc(130px * $scope-532);
+    grid-template-columns: calc(30px * $scope-532) 2fr 1fr calc(30px * $scope-532);    
+    grid-template-areas:
+      ". form form ."
+      ". socials logo ."
+      ". . copy .";
+  }
+
+  @media (max-width: 532px) {
+    // padding-right: calc(120px * $scope-532)
+  }
   
   .footer__socials {
     grid-area: socials;
+
+    @media (min-width: 533px) and (max-width: 950px) {
+      justify-self: end;
+    }
 
     .footer__social-list {
       display: flex;
       gap: 17px;
 
+      @media (min-width: 1283px) and (max-width: 1920px) {
+        gap: calc(17px * $scope);
+      }
+
+      @media (min-width: 951px) and (max-width: 1282px) {
+        gap: calc(17px * $scope-1282);
+      }
+
+      @media (min-width: 533px) and (max-width: 950px) {
+        gap: calc(17px * $scope-950);
+      }
+    
+      @media (max-width: 532px) {
+        gap: calc(17px * $scope-532);
+      }
+
       .footer__social-item {
+        @media (min-width: 1283px) and (max-width: 1920px) {
+          height: calc(42px * $scope);
+        }
+
+        @media (min-width: 951px) and (max-width: 1282px) {
+          height: calc(42px * $scope-1282);
+        }
+
+        @media (min-width: 533px) and (max-width: 950px) {
+          height: calc(42px * $scope-950);
+        }
+      
+        @media (max-width: 532px) {
+          height: calc(42px * $scope-532);
+        }
+
         .footer__social-link {
+          display: inline-block;
+          
+          @media (min-width: 1283px) and (max-width: 1920px) {
+            height: calc(42px * $scope);
+          }
+
+          @media (min-width: 951px) and (max-width: 1282px) {
+            height: calc(42px * $scope-1282);
+          }
+
+          @media (min-width: 533px) and (max-width: 950px) {
+            height: calc(42px * $scope-950);
+          }
+        
+          @media (max-width: 532px) {
+            height: calc(42px * $scope-532);
+          }  
+
+          svg {
+            width: 42px;
+            height: 42px;
+
+            @media (min-width: 1283px) and (max-width: 1920px) {
+              width: calc(42px * $scope);
+              height: calc(42px * $scope);
+            }
+
+            @media (min-width: 951px) and (max-width: 1282px) {
+              width: calc(42px * $scope-1282);
+              height: calc(42px * $scope-1282);
+            }
+
+            @media (min-width: 533px) and (max-width: 950px) {
+              width: calc(42px * $scope-950);
+              height: calc(42px * $scope-950);
+            }
+          
+            @media (max-width: 532px) {
+              width: calc(42px * $scope-532);
+              height: calc(42px * $scope-532);
+            }  
+          }
+
           svg :is(circle, rect, path) {
             transition: fill .18s ease-out, stroke .18s ease-out;
           }
 
           svg > g > circle {
             fill: transparent;
-            stroke: var(--main);
+            stroke: var(--main)
           }
           
           &:hover > svg > g > circle {
@@ -57,7 +175,7 @@
     
             &:last-of-type {
               fill: var(--gray-dark);
-              stroke: var(--gray-dark);
+              stroke: var(--gray-dark)
             }
           }      
     
@@ -169,8 +287,28 @@
       color: var(--main);
       font-size: 20px;
       line-height: 1.3;
-      letter-spacing: 1px;
+      letter-spacing: 0.05em;
       margin-bottom: 20px;
+
+      @media (min-width: 1283px) and (max-width: 1920px) {
+        font-size: calc(20px * $scope);
+        margin-bottom: calc(20px * $scope);
+      }
+
+      @media (min-width: 951px) and (max-width: 1282px) {
+        font-size: calc(20px * $scope-1282);
+        margin-bottom: calc(20px * $scope-1282);
+      }
+
+      @media (min-width: 533px) and (max-width: 950px) {
+        font-size: calc(20px * $scope-950);
+        margin-bottom: calc(20px * $scope-950);
+      }
+    
+      @media (max-width: 532px) {
+        font-size: calc(20px * $scope-532);
+        margin-bottom: calc(20px * $scope-532);
+      }
     }
 
     .form__input {
@@ -178,6 +316,34 @@
       width: 234px;
       height: 42px;
       padding-inline: 24px;
+
+      @media (min-width: 1283px) and (max-width: 1920px) {
+        font-size: calc(14px * $scope);
+        width: calc(234px * $scope);
+        height: calc(42px * $scope);
+        padding-inline: calc(24px * $scope);
+      }
+
+      @media (min-width: 951px) and (max-width: 1282px) {
+        font-size: calc(14px * $scope-1282);
+        width: calc(320px * $scope-1282);
+        height: calc(42px * $scope-1282);
+        padding-inline: calc(24px * $scope-1282);
+      }
+
+      @media (min-width: 533px) and (max-width: 950px) {
+        font-size: calc(14px * $scope-950);
+        width: calc(294px * $scope-950);
+        height: calc(42px * $scope-950);
+        padding-inline: calc(24px * $scope-950);
+      }
+    
+      @media (max-width: 532px) {
+        font-size: calc(14px * $scope-532);
+        width: calc(100% - calc(98px * $scope-532));
+        height: calc(42px * $scope-532);
+        padding-inline: calc(24px * $scope-532);
+      }     
     }
 
     .form__submit {
@@ -186,9 +352,33 @@
       background-color: var(--turquoise);
       color: var(--main);
       font-size: 14px;
-      letter-spacing: 1px;
+      letter-spacing: 0.05em;
 
       transition: background-color .18s ease-out, color .18s ease-out;
+
+      @media (min-width: 1283px) and (max-width: 1920px) {
+        width: calc(98px * $scope);
+        height: calc(42px * $scope);
+        font-size: calc(14px * $scope);
+      }
+
+      @media (min-width: 951px) and (max-width: 1282px) {
+        width: calc(98px * $scope-1282);
+        height: calc(42px * $scope-1282);
+        font-size: calc(14px * $scope-1282);
+      }
+
+      @media (min-width: 533px) and (max-width: 950px) {
+        width: calc(98px * $scope-950);
+        height: calc(42px * $scope-950);
+        font-size: calc(14px * $scope-950);
+      }
+    
+      @media (max-width: 532px) {
+        width: calc(98px * $scope-532);
+        height: calc(42px * $scope-532);
+        font-size: calc(14px * $scope-532);
+      } 
 
       &:hover {
         background-color: var(--main);
@@ -204,10 +394,40 @@
   
   .footer__logo {
     grid-area: logo;
-    position: relative;
     justify-self: right;
+    position: relative;
+    width: 46px;
+    height: 69px;
     right: 116px;
     bottom: -15px;
+
+    @media (min-width: 1283px) and (max-width: 1920px) {
+      width: calc(46px * $scope);
+      height: calc(69px * $scope);
+      right: calc(116px * $scope);
+      bottom: calc(-15px * $scope);
+    }
+
+    @media (min-width: 951px) and (max-width: 1282px) {
+      width: calc(46px * $scope-1282);
+      height: calc(69px * $scope-1282);
+      right: calc(116px * $scope-1282);
+      bottom: calc(-15px * $scope-1282);
+    }
+
+    @media (min-width: 533px) and (max-width: 950px) {
+      width: calc(46px * $scope-950);
+      height: calc(69px * $scope-950);
+      right: calc(39px * $scope-950);
+      bottom: calc(-15px * $scope-950);
+    }
+  
+    @media (max-width: 532px) {
+      width: calc(46px * $scope-532);
+      height: calc(69px * $scope-532);
+      right: calc(39px * $scope-532);
+      bottom: calc(-15px * $scope-532);
+    }  
 
     :is(ellipse, path) {
       fill: var(--gray);
@@ -224,5 +444,29 @@
     color: var(--gray);
     font-family: Inter;
     font-size: 11px;
+
+    @media (min-width: 1283px) and (max-width: 1920px) {
+      margin-bottom: calc(44px * $scope);
+      margin-right: calc(77px * $scope);
+      font-size: calc(11px * $scope);
+    }
+
+    @media (min-width: 951px) and (max-width: 1282px) {
+      margin-bottom: calc(44px * $scope-1282);
+      margin-right: calc(77px * $scope-1282);
+      font-size: calc(11px * $scope-1282);
+    }
+
+    @media (min-width: 533px) and (max-width: 950px) {
+      margin-bottom: calc(44px * $scope-950);
+      margin-right: 0;
+      font-size: calc(11px * $scope-950);
+    }
+  
+    @media (max-width: 532px) {
+      margin-bottom: calc(44px * $scope-532);
+      margin-right: 0;
+      font-size: calc(11px * $scope-532);
+    }  
   }
 }

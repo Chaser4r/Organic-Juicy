@@ -2,12 +2,46 @@
   grid-area: thirsty;
   background-color: var(--orange);
   flex-direction: row-reverse;
-  justify-content: start;
+  justify-content: flex-end;
   column-gap: 70px;
+
+  @media (min-width: 1283px) and (max-width: 1920px) {
+    column-gap: calc(70px * $scope)
+  }
+
+  @media (min-width: 951px) and (max-width: 1282px) {
+    column-gap: calc(70px * $scope-1282)
+  }
+
+  @media (min-width: 533px) and (max-width: 950px) {
+    column-gap: calc(70px * $scope-950);
+  }
+
+  @media (max-width: 532px) {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: calc(35px * $scope-532);
+  }
 
   .thirsty__title {    
     span {
       left: -2px;
+
+      @media (min-width: 1283px) and (max-width: 1920px) {
+        left: calc(-2px * $scope)
+      }
+
+      @media (min-width: 951px) and (max-width: 1282px) {
+        left: calc(-2px * $scope-1282)
+      }
+
+      @media (min-width: 533px) and (max-width: 950px) {
+        left: calc(-2px * $scope-950)
+      }
+    
+      @media (max-width: 532px) {
+        left: calc(-2px * $scope-532)
+      }
     }
   }
   
@@ -15,6 +49,27 @@
     max-width: 348px;
     padding-left: 120px;
     text-align: right;
+
+    @media (min-width: 1283px) and (max-width: 1920px) {
+      max-width: calc(348px * $scope);
+      padding-left: calc(120px * $scope)
+    }
+
+    @media (min-width: 951px) and (max-width: 1282px) {
+      max-width: calc(348px * $scope-1282);
+      padding-left: calc(120px * $scope-1282)
+    }
+
+    @media (min-width: 533px) and (max-width: 950px) {
+      max-width: calc(348px * $scope-950);
+      padding-left: calc(120px * $scope-950)
+    }
+  
+    @media (max-width: 532px) {
+      max-width: auto;
+      padding-left: 0;
+      text-align: start;      
+    }
   }
 }
 

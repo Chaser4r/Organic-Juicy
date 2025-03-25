@@ -16,21 +16,27 @@
 body {
   font-family: "Geometr706 Md BT Medium";
   font-size: 14px;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
 
 .container {
-  width: 1920px;
-  margin-block: auto;
+  max-width: 1920px;
+  margin-inline: auto;
 }
 
-.img-section {
+.img-block {
   position: relative;
 }
-.img-section:hover .imgs-wrapper {
+.img-block:hover .imgs-wrapper {
   -webkit-filter: brightness(100%);
           filter: brightness(100%);
 }
-.img-section:hover .btn {
+.img-block:hover .btn {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
@@ -47,7 +53,11 @@ body {
   transition: filter 0.18s ease-out;
   transition: filter 0.18s ease-out, -webkit-filter 0.18s ease-out;
 }
-.text-section {
+.imgs-wrapper img {
+  width: 100%;
+}
+
+.text-block {
   padding: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,13 +68,67 @@ body {
   gap: 60px;
   color: var(--main);
 }
-.text-section .text-section__title {
-  max-width: 190px;
+@media (min-width: 1283px) and (max-width: 1920px) {
+  .text-block {
+    padding: 3.6458333333vw;
+    gap: 3.125vw;
+  }
+}
+@media (min-width: 951px) and (max-width: 1282px) {
+  .text-block {
+    padding: 5.4602184087vw;
+    gap: 4.6801872075vw;
+  }
+}
+@media (min-width: 533px) and (max-width: 950px) {
+  .text-block {
+    padding: 7.3684210526vw;
+    gap: 6.3157894737vw;
+  }
+}
+@media (max-width: 532px) {
+  .text-block {
+    padding-inline: 6.5789473684vw;
+    padding-block: 7.5187969925vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 6.5789473684vw;
+  }
+}
+.text-block .text-block__title {
+  max-width: 155px;
   font-size: 22px;
   line-height: 1.2;
   text-transform: uppercase;
 }
-.text-section .text-section__title span {
+@media (min-width: 1283px) and (max-width: 1920px) {
+  .text-block .text-block__title {
+    max-width: 8.0729166667vw;
+    font-size: 1.1458333333vw;
+  }
+}
+@media (min-width: 951px) and (max-width: 1282px) {
+  .text-block .text-block__title {
+    max-width: 12.0904836193vw;
+    font-size: 1.7160686427vw;
+  }
+}
+@media (min-width: 533px) and (max-width: 950px) {
+  .text-block .text-block__title {
+    max-width: 16.3157894737vw;
+    font-size: 2.3157894737vw;
+  }
+}
+@media (max-width: 532px) {
+  .text-block .text-block__title {
+    max-width: -webkit-min-content;
+    max-width: -moz-min-content;
+    max-width: min-content;
+    font-size: 4.1353383459vw;
+  }
+}
+.text-block .text-block__title span {
   display: inline-block;
   font-family: "Geometr706 Md BT Medium";
   font-size: 66px;
@@ -75,16 +139,80 @@ body {
   position: relative;
   left: -4px;
 }
-.text-section .text-section__title span::first-line {
+@media (min-width: 1283px) and (max-width: 1920px) {
+  .text-block .text-block__title span {
+    font-size: 3.4375vw;
+    left: -0.2083333333vw;
+  }
+}
+@media (min-width: 951px) and (max-width: 1282px) {
+  .text-block .text-block__title span {
+    font-size: 5.1482059282vw;
+    left: -0.3120124805vw;
+  }
+}
+@media (min-width: 533px) and (max-width: 950px) {
+  .text-block .text-block__title span {
+    font-size: 6.9473684211vw;
+    left: -0.4210526316vw;
+  }
+}
+@media (max-width: 532px) {
+  .text-block .text-block__title span {
+    font-size: 12.4060150376vw;
+    left: -0.7518796992vw;
+  }
+}
+.text-block .text-block__title span::first-line {
   font-family: "Geometr231 Hv BT Heavy";
   font-size: 78px;
   letter-spacing: normal;
 }
-.text-section .text-section__desc {
+@media (min-width: 1283px) and (max-width: 1920px) {
+  .text-block .text-block__title span::first-line {
+    font-size: 4.0625vw;
+  }
+}
+@media (min-width: 951px) and (max-width: 1282px) {
+  .text-block .text-block__title span::first-line {
+    font-size: 6.0842433697vw;
+  }
+}
+@media (min-width: 533px) and (max-width: 950px) {
+  .text-block .text-block__title span::first-line {
+    font-size: 8.2105263158vw;
+  }
+}
+@media (max-width: 532px) {
+  .text-block .text-block__title span::first-line {
+    font-size: 14.6616541353vw;
+  }
+}
+.text-block .text-block__desc {
   font-size: 14px;
   line-height: 1.4;
   -ms-hyphens: auto;
       hyphens: auto;
+}
+@media (min-width: 1283px) and (max-width: 1920px) {
+  .text-block .text-block__desc {
+    font-size: 0.7291666667vw;
+  }
+}
+@media (min-width: 951px) and (max-width: 1282px) {
+  .text-block .text-block__desc {
+    font-size: 1.0920436817vw;
+  }
+}
+@media (min-width: 533px) and (max-width: 950px) {
+  .text-block .text-block__desc {
+    font-size: 1.4736842105vw;
+  }
+}
+@media (max-width: 532px) {
+  .text-block .text-block__desc {
+    font-size: 3.3834586466vw;
+  }
 }
 
 .btn {
@@ -103,6 +231,42 @@ body {
   -webkit-transition: background-color 0.18s ease-out, border-color 0.18s ease-out, color 0.18s ease-out;
   transition: background-color 0.18s ease-out, border-color 0.18s ease-out, color 0.18s ease-out;
 }
+@media (min-width: 1283px) and (max-width: 1920px) {
+  .btn {
+    width: 9.4791666667vw;
+    height: 2.6041666667vw;
+    border-width: 0.1041666667vw;
+    font-size: 0.6770833333vw;
+    letter-spacing: 0.1041666667vw;
+  }
+}
+@media (min-width: 951px) and (max-width: 1282px) {
+  .btn {
+    width: 14.1965678627vw;
+    height: 3.9001560062vw;
+    border-width: 0.1560062402vw;
+    font-size: 1.0140405616vw;
+    letter-spacing: 0.1560062402vw;
+  }
+}
+@media (min-width: 533px) and (max-width: 950px) {
+  .btn {
+    width: 19.1578947368vw;
+    height: 5.2631578947vw;
+    border-width: 0.2105263158vw;
+    font-size: 1.3684210526vw;
+    letter-spacing: 0.2105263158vw;
+  }
+}
+@media (max-width: 532px) {
+  .btn {
+    width: 34.2105263158vw;
+    height: 9.3984962406vw;
+    border-width: 0.3759398496vw;
+    font-size: 2.4436090226vw;
+    letter-spacing: 0.3759398496vw;
+  }
+}
 .btn:hover:hover:hover {
   background-color: var(--main);
 }
@@ -117,6 +281,42 @@ body {
   border-radius: 25px;
   font-size: 12px;
   letter-spacing: 1.5px;
+}
+@media (min-width: 1283px) and (max-width: 1920px) {
+  .btn_rounded {
+    width: 4.4270833333vw;
+    height: 2.0833333333vw;
+    border-radius: 1.3020833333vw;
+    font-size: 0.625vw;
+    letter-spacing: 0.078125vw;
+  }
+}
+@media (min-width: 951px) and (max-width: 1282px) {
+  .btn_rounded {
+    width: 6.6302652106vw;
+    height: 3.120124805vw;
+    border-radius: 1.9500780031vw;
+    font-size: 0.9360374415vw;
+    letter-spacing: 0.1170046802vw;
+  }
+}
+@media (min-width: 533px) and (max-width: 950px) {
+  .btn_rounded {
+    width: 8.9473684211vw;
+    height: 4.2105263158vw;
+    border-radius: 2.6315789474vw;
+    font-size: 1.2631578947vw;
+    letter-spacing: 0.1578947368vw;
+  }
+}
+@media (max-width: 532px) {
+  .btn_rounded {
+    width: 15.977443609vw;
+    height: 7.5187969925vw;
+    border-radius: 4.6992481203vw;
+    font-size: 2.2556390977vw;
+    letter-spacing: 0.2819548872vw;
+  }
 }
 
 .btn_absolute {

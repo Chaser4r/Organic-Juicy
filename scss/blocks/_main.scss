@@ -1,8 +1,48 @@
 .main {
   display: grid;
-  grid-template: 332px 116px 332px / 638px 332px 418px 532px;
+  grid-template-rows: 332px 116px 332px; 
+  grid-template-columns: 638px 332px 418px 532px;
   grid-template-areas:
     "slider-arrows healthy thirsty thirsty"
     "slider-arrows healthy slider-dots orange"
-    "freshy healthy slider-dots orange";  
+    "freshy healthy slider-dots orange";
+
+  @media (min-width: 1283px) and (max-width: 1920px) {
+    grid-template-rows: calc(332px * $scope) calc(116px * $scope) calc(332px * $scope) ; 
+    grid-template-columns: calc(638px * $scope) calc(332px * $scope) calc(418px * $scope) calc(532px * $scope);
+  };
+
+  @media (min-width: 951px) and (max-width: 1282px) {
+    grid-template-rows: calc(332px * $scope-1282) calc(448px * $scope-1282) calc(332px * $scope-1282) calc(448px * $scope-1282); 
+    grid-template-columns: calc(332px * $scope-1282) calc(418px * $scope-1282) calc(200px * $scope-1282) calc(332px * $scope-1282);
+    grid-template-areas:
+      "freshy freshy freshy juicy"
+      "slider-arrows slider-arrows slider-arrows juicy"
+      "healthy thirsty thirsty thirsty"
+      "healthy slider-dots orange orange";
+  }
+
+  @media (min-width: 533px) and (max-width: 950px) {
+    grid-template-rows: calc(332px * $scope-950) calc(448px * $scope-950) calc(332px * $scope-950) calc(448px * $scope-950) calc(332px * $scope-950); 
+    grid-template-columns: calc(418px * $scope-950) calc(200px * $scope-950) calc(332px * $scope-950);
+    grid-template-areas:
+      "freshy freshy juicy"
+      "slider-arrows slider-arrows juicy"
+      "thirsty thirsty thirsty"
+      "slider-dots orange orange"
+      "healthy healthy healthy"
+  }
+
+  @media (max-width: 532px) {
+    grid-template-rows: max-content calc(388px * $scope-532) max-content calc(388px * $scope-532) max-content calc(388px * $scope-532) max-content; 
+    grid-template-columns: calc(532px * $scope-532);
+    grid-template-areas:
+      "freshy"
+      "slider-arrows"
+      "healthy"
+      "slider-dots"
+      "thirsty"
+      "orange"
+      "juicy"
+  }
 }

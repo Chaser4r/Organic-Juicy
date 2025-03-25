@@ -2,6 +2,25 @@
   grid-area: healthy;
   background-color: var(--red);
   flex-direction: column-reverse;
+
+  @media (min-width: 533px) and (max-width: 950px) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    column-gap: calc(70px * $scope-950);
+  }
+
+  @media (max-width: 532px) {
+    flex-direction: row;
+    column-gap: calc(35px * $scope-532);
+  }
+
+  .healthy__desc {    
+    @media (min-width: 533px) and (max-width: 950px) {
+      text-align: right;
+      max-width: calc(348px * $scope-950);
+      padding-left: calc(120px * $scope-950)
+    }
+  }
 }
 
 

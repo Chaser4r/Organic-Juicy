@@ -1,0 +1,58 @@
+.menu-icon {
+  grid-area: menu-icon;
+  justify-self: end;
+  display: none;
+  position: relative;
+
+  @media (max-width: 532px) {
+    display: block;
+    width: calc(36px * $scope-532);
+    height: calc(30px * $scope-532);
+  }
+
+  .menu-icon__line {
+    visibility: visible;
+    transition: visibility .18s ease-out, opacity .18s ease-out;
+  }
+
+  .menu-icon__line,
+  &::before,
+  &::after {
+    display: block;
+    width: 100%;
+    height: calc(3px * $scope-532);
+    background-color: #000;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+
+  &::before {
+    top: 0;
+    transition: top .18s ease-out, transform .18s ease-out;
+  }
+
+  &::after {
+    bottom: 0;
+    transition: bottom .18s ease-out, transform .18s ease-out;
+  }
+}
+
+.menu-icon_active .menu-icon__line {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu-icon_active::before {
+  transform: translateY(-50%) rotate(-45deg);
+  top: 50%;
+}
+
+.menu-icon_active::after{
+  transform: translateY(50%) rotate(45deg);
+  bottom: 50%;
+}

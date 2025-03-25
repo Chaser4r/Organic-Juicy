@@ -1,6 +1,11 @@
 // font-family: "Geometr231 Hv BT Heavy";
 // font-family: "Geometr706 Md BT Medium";
 
+$scope: (100vw / 1920px);
+$scope-1282: (100vw / 1282px);
+$scope-950: (100vw / 950px);
+$scope-532: (100vw / 532px);
+
 :root {
   --main: rgb(255, 255, 255);
   --main-dark: rgb(230, 230, 230);
@@ -19,14 +24,20 @@
 body {
   font-family: "Geometr706 Md BT Medium";
   font-size: 14px;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
 
 .container {
-  width: 1920px;
-  margin-block: auto;
+  max-width: 1920px;
+  margin-inline: auto;
 }
 
-.img-section {
+.img-block {
   position: relative;
 
   &:hover .imgs-wrapper {
@@ -45,23 +56,66 @@ body {
 
   filter: brightness(85%);
   transition: filter .18s ease-out;
-  
-  .slider-arrows__img {
+
+  img {
+    width: 100%;
   }
 }
 
-.text-section {
+.text-block {
   padding: 70px;
   display: flex;
   align-items: flex-start;
   gap: 60px;
   color: var(--main);
 
-  .text-section__title {
-    max-width: 190px;
+  @media (min-width: 1283px) and (max-width: 1920px) {
+    padding: calc(70px * $scope);
+    gap: calc(60px * $scope);
+  }
+
+  @media (min-width: 951px) and (max-width: 1282px) {
+    padding: calc(70px * $scope-1282);
+    gap: calc(60px * $scope-1282);
+  }
+
+  @media (min-width: 533px) and (max-width: 950px) {
+    padding: calc(70px * $scope-950);
+    gap: calc(60px * $scope-950);
+  }
+
+  @media (max-width: 532px) {
+    padding-inline: calc(35px * $scope-532);
+    padding-block: calc(40px * $scope-532);
+    justify-content: space-between;
+    gap: calc(35px * $scope-532);
+  }
+
+  .text-block__title {
+    max-width: 155px;
     font-size: 22px;
     line-height: 1.2;
     text-transform: uppercase;
+
+    @media (min-width: 1283px) and (max-width: 1920px) {
+      max-width: calc(155px * $scope);
+      font-size: calc(22px * $scope);
+    }
+
+    @media (min-width: 951px) and (max-width: 1282px) {
+      max-width: calc(155px * $scope-1282);
+      font-size: calc(22px * $scope-1282);
+    }
+
+    @media (min-width: 533px) and (max-width: 950px) {
+      max-width: calc(155px * $scope-950);
+      font-size: calc(22px * $scope-950);
+    }
+  
+    @media (max-width: 532px) {
+      max-width: min-content;
+      font-size: calc(22px * $scope-532);
+    }
     
     span {
       display: inline-block;
@@ -74,18 +128,70 @@ body {
       position: relative;
       left: -4px;
 
+      @media (min-width: 1283px) and (max-width: 1920px) {
+        font-size: calc(66px * $scope);    
+        left: calc(-4px * $scope);    
+      }
+
+      @media (min-width: 951px) and (max-width: 1282px) {
+        font-size: calc(66px * $scope-1282);    
+        left: calc(-4px * $scope-1282); 
+      }
+
+      @media (min-width: 533px) and (max-width: 950px) {
+        font-size: calc(66px * $scope-950);
+        left: calc(-4px * $scope-950);
+      }
+    
+      @media (max-width: 532px) {
+        font-size: calc(66px * $scope-532);
+        left: calc(-4px * $scope-532);
+      }
+
       &::first-line {
         font-family: "Geometr231 Hv BT Heavy";
         font-size: 78px;
         letter-spacing: normal;
+
+        @media (min-width: 1283px) and (max-width: 1920px) {
+          font-size: calc(78px * $scope);
+        }
+
+        @media (min-width: 951px) and (max-width: 1282px) {
+          font-size: calc(78px * $scope-1282);
+        }
+
+        @media (min-width: 533px) and (max-width: 950px) {
+          font-size: calc(78px * $scope-950);
+        }
+      
+        @media (max-width: 532px) {
+          font-size: calc(78px * $scope-532);
+        }
       }
     }
   }
 
-  .text-section__desc {
+  .text-block__desc {
     font-size: 14px;
     line-height: 1.4;
     hyphens: auto;
+
+    @media (min-width: 1283px) and (max-width: 1920px) {
+      font-size: calc(14px * $scope);
+    }
+
+    @media (min-width: 951px) and (max-width: 1282px) {
+      font-size: calc(14px * $scope-1282);
+    }
+
+    @media (min-width: 533px) and (max-width: 950px) {
+      font-size: calc(14px * $scope-950);
+    }
+  
+    @media (max-width: 532px) {
+      font-size: calc(18px * $scope-532);
+    }
   } 
 }
 
@@ -105,6 +211,43 @@ body {
 
   transition: background-color .18s ease-out, border-color .18s ease-out, color .18s ease-out;
 
+  @media (min-width: 1283px) and (max-width: 1920px) {
+    width: calc(182px * $scope);
+    height: calc(50px * $scope);
+    border-width: calc(2px * $scope);
+
+    font-size: calc(13px * $scope);
+    letter-spacing: calc(2px * $scope);
+  };
+
+  @media (min-width: 951px) and (max-width: 1282px) {
+    width: calc(182px * $scope-1282);
+    height: calc(50px * $scope-1282);
+    border-width: calc(2px * $scope-1282);
+
+    font-size: calc(13px * $scope-1282);
+    letter-spacing: calc(2px * $scope-1282);
+  }
+
+  @media (min-width: 533px) and (max-width: 950px) {
+    width: calc(182px * $scope-950);
+    height: calc(50px * $scope-950);
+    border-width: calc(2px * $scope-950);
+
+    font-size: calc(13px * $scope-950);
+    letter-spacing: calc(2px * $scope-950);
+  }
+
+  @media (max-width: 532px) {
+    width: calc(182px * $scope-532);
+    height: calc(50px * $scope-532);
+    border-width: calc(2px * $scope-532);
+
+    font-size: calc(13px * $scope-532);
+    letter-spacing: calc(2px * $scope-532);
+  }
+
+
   &:hover:hover:hover {
     background-color: var(--main);
   }
@@ -122,6 +265,42 @@ body {
   
   font-size: 12px;
   letter-spacing: 1.5px;
+
+  @media (min-width: 1283px) and (max-width: 1920px) {
+    width: calc(85px * $scope);
+    height: calc(40px * $scope);
+    border-radius: calc(25px * $scope);
+    
+    font-size: calc(12px * $scope);
+    letter-spacing: calc(1.5px * $scope);
+  }
+
+  @media (min-width: 951px) and (max-width: 1282px) {
+    width: calc(85px * $scope-1282);
+    height: calc(40px * $scope-1282);
+    border-radius: calc(25px * $scope-1282);
+    
+    font-size: calc(12px * $scope-1282);
+    letter-spacing: calc(1.5px * $scope-1282);
+  }
+
+  @media (min-width: 533px) and (max-width: 950px) {
+    width: calc(85px * $scope-950);
+    height: calc(40px * $scope-950);
+    border-radius: calc(25px * $scope-950);
+    
+    font-size: calc(12px * $scope-950);
+    letter-spacing: calc(1.5px * $scope-950);
+  }
+
+  @media (max-width: 532px) {
+    width: calc(85px * $scope-532);
+    height: calc(40px * $scope-532);
+    border-radius: calc(25px * $scope-532);
+    
+    font-size: calc(12px * $scope-532);
+    letter-spacing: calc(1.5px * $scope-532);
+  }
 }
 
 .btn_absolute {
@@ -130,3 +309,4 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
