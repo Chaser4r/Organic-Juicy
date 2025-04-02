@@ -45,7 +45,7 @@ function showImgArrows(num) {
   }
 
   imgsArrows.forEach((img, index) => {
-    switch(index === activeImgArrowIndex) {
+    switch (index === activeImgArrowIndex) {
       case false:
         img.style.display = 'none';
         break;
@@ -61,7 +61,15 @@ function showImgArrows(num) {
 
 const sliderDots = document.querySelector('.slider-dots'),
   imgsDots = sliderDots.querySelectorAll('.slider-dots__img'),
-  navDots = sliderDots.querySelectorAll('.slider-dots__nav-item')
+  navDotsWrap = sliderDots.querySelector('.slider-dots__nav'),
+  navDots = [];
+
+for (let i = 0; i < imgsDots.length; i++) {
+  const dot = document.createElement('button');
+  dot.classList.add('slider-dots__nav-item');
+  navDotsWrap.append(dot);
+  navDots.push(dot);
+}
 
 let activeImgDotsIndex = 0;
 
@@ -92,7 +100,7 @@ function showImgDots(index) {
   })
 
   imgsDots.forEach((img, index) => {
-    switch(index === activeImgDotsIndex) {
+    switch (index === activeImgDotsIndex) {
       case false:
         img.style.display = 'none';
         break;

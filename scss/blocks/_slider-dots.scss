@@ -19,29 +19,29 @@
   .slider-dots__nav {
     position: absolute;
     display: flex;
-    justify-content: space-between;
-    width: 62px;
+    column-gap: 11.5px;
+    // width: 62px;
     left: 50%;
     bottom: 60px;
     transform: translateX(-50%);
 
     @media (min-width: 1282px) and (max-width: 1920px) {
-      width: calc(62px * $scope);
+      column-gap: calc(11.5px * $scope);
       bottom: calc(60px * $scope);
     }
 
     @media (min-width: 951px) and (max-width: 1282px) {
-      width: calc(62px * $scope-1282);
+      column-gap: calc(11.5px * $scope-1282);
       bottom: calc(60px * $scope-1282);
     }
 
     @media (min-width: 533px) and (max-width: 950px) {
-      width: calc(62px * $scope-950);
+      column-gap: calc(11.5px * $scope-950);
       bottom: calc(60px * $scope-950);
     }
   
     @media (max-width: 532px) {
-      width: calc(62px * $scope-532);
+      column-gap: calc(11.5px * $scope-532);
       bottom: calc(60px * $scope-532);
     }
     
