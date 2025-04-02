@@ -54,7 +54,8 @@ body {
   transition: filter 0.18s ease-out, -webkit-filter 0.18s ease-out;
 }
 .imgs-wrapper img {
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .text-block {
@@ -213,116 +214,4 @@ body {
   .text-block .text-block__desc {
     font-size: 3.3834586466vw;
   }
-}
-
-.btn {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 182px;
-  height: 50px;
-  border: 2px solid var(--main);
-  background-color: transparent;
-  color: var(--main);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  -webkit-transition: background-color 0.18s ease-out, border-color 0.18s ease-out, color 0.18s ease-out;
-  transition: background-color 0.18s ease-out, border-color 0.18s ease-out, color 0.18s ease-out;
-}
-@media (min-width: 1283px) and (max-width: 1920px) {
-  .btn {
-    width: 9.4791666667vw;
-    height: 2.6041666667vw;
-    border-width: 0.1041666667vw;
-    font-size: 0.6770833333vw;
-    letter-spacing: 0.1041666667vw;
-  }
-}
-@media (min-width: 951px) and (max-width: 1282px) {
-  .btn {
-    width: 14.1965678627vw;
-    height: 3.9001560062vw;
-    border-width: 0.1560062402vw;
-    font-size: 1.0140405616vw;
-    letter-spacing: 0.1560062402vw;
-  }
-}
-@media (min-width: 533px) and (max-width: 950px) {
-  .btn {
-    width: 19.1578947368vw;
-    height: 5.2631578947vw;
-    border-width: 0.2105263158vw;
-    font-size: 1.3684210526vw;
-    letter-spacing: 0.2105263158vw;
-  }
-}
-@media (max-width: 532px) {
-  .btn {
-    width: 34.2105263158vw;
-    height: 9.3984962406vw;
-    border-width: 0.3759398496vw;
-    font-size: 2.4436090226vw;
-    letter-spacing: 0.3759398496vw;
-  }
-}
-.btn:hover:hover:hover {
-  background-color: var(--main);
-}
-.btn:active:active:active {
-  background-color: var(--main-dark);
-  border-color: var(--main-dark);
-}
-
-.btn_rounded {
-  width: 85px;
-  height: 40px;
-  border-radius: 25px;
-  font-size: 12px;
-  letter-spacing: 1.5px;
-}
-@media (min-width: 1283px) and (max-width: 1920px) {
-  .btn_rounded {
-    width: 4.4270833333vw;
-    height: 2.0833333333vw;
-    border-radius: 1.3020833333vw;
-    font-size: 0.625vw;
-    letter-spacing: 0.078125vw;
-  }
-}
-@media (min-width: 951px) and (max-width: 1282px) {
-  .btn_rounded {
-    width: 6.6302652106vw;
-    height: 3.120124805vw;
-    border-radius: 1.9500780031vw;
-    font-size: 0.9360374415vw;
-    letter-spacing: 0.1170046802vw;
-  }
-}
-@media (min-width: 533px) and (max-width: 950px) {
-  .btn_rounded {
-    width: 8.9473684211vw;
-    height: 4.2105263158vw;
-    border-radius: 2.6315789474vw;
-    font-size: 1.2631578947vw;
-    letter-spacing: 0.1578947368vw;
-  }
-}
-@media (max-width: 532px) {
-  .btn_rounded {
-    width: 15.977443609vw;
-    height: 7.5187969925vw;
-    border-radius: 4.6992481203vw;
-    font-size: 2.2556390977vw;
-    letter-spacing: 0.2819548872vw;
-  }
-}
-
-.btn_absolute {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }

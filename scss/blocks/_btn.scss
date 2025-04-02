@@ -1,0 +1,114 @@
+.btn {
+  box-sizing: border-box;
+  width: 182px;
+  height: 50px;
+  border: 2px solid var(--main);
+
+  background-color: transparent;
+  color: var(--main);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+
+  transition: background-color .18s ease-out, border-color .18s ease-out, color .18s ease-out;
+
+  @media (min-width: 1283px) and (max-width: 1920px) {
+    width: calc(182px * $scope);
+    height: calc(50px * $scope);
+    border-width: calc(2px * $scope);
+
+    font-size: calc(13px * $scope);
+    letter-spacing: calc(2px * $scope);
+  };
+
+  @media (min-width: 951px) and (max-width: 1282px) {
+    width: calc(182px * $scope-1282);
+    height: calc(50px * $scope-1282);
+    border-width: calc(2px * $scope-1282);
+
+    font-size: calc(13px * $scope-1282);
+    letter-spacing: calc(2px * $scope-1282);
+  }
+
+  @media (min-width: 533px) and (max-width: 950px) {
+    width: calc(182px * $scope-950);
+    height: calc(50px * $scope-950);
+    border-width: calc(2px * $scope-950);
+
+    font-size: calc(13px * $scope-950);
+    letter-spacing: calc(2px * $scope-950);
+  }
+
+  @media (max-width: 532px) {
+    width: calc(182px * $scope-532);
+    height: calc(50px * $scope-532);
+    border-width: calc(2px * $scope-532);
+
+    font-size: calc(13px * $scope-532);
+    letter-spacing: calc(2px * $scope-532);
+  }
+
+
+  &:hover:hover:hover {
+    background-color: var(--main);
+  }
+
+  &:active:active:active {
+    background-color: var(--main-dark);
+    border-color: var(--main-dark);
+  }
+}
+
+.btn_rounded {
+  width: 85px;
+  height: 40px;
+  border-radius: 25px;
+  
+  font-size: 12px;
+  letter-spacing: 1.5px;
+
+  @media (min-width: 1283px) and (max-width: 1920px) {
+    width: calc(85px * $scope);
+    height: calc(40px * $scope);
+    border-radius: calc(25px * $scope);
+    
+    font-size: calc(12px * $scope);
+    letter-spacing: calc(1.5px * $scope);
+  }
+
+  @media (min-width: 951px) and (max-width: 1282px) {
+    width: calc(85px * $scope-1282);
+    height: calc(40px * $scope-1282);
+    border-radius: calc(25px * $scope-1282);
+    
+    font-size: calc(12px * $scope-1282);
+    letter-spacing: calc(1.5px * $scope-1282);
+  }
+
+  @media (min-width: 533px) and (max-width: 950px) {
+    width: calc(85px * $scope-950);
+    height: calc(40px * $scope-950);
+    border-radius: calc(25px * $scope-950);
+    
+    font-size: calc(12px * $scope-950);
+    letter-spacing: calc(1.5px * $scope-950);
+  }
+
+  @media (max-width: 532px) {
+    width: calc(85px * $scope-532);
+    height: calc(40px * $scope-532);
+    border-radius: calc(25px * $scope-532);
+    
+    font-size: calc(12px * $scope-532);
+    letter-spacing: calc(1.5px * $scope-532);
+  }
+}
+
+.btn_absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

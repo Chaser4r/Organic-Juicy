@@ -3,7 +3,6 @@
 
   .slider-arrows__imgs-wrapper {
     .slider-arrows__img {
-      width: 100%;
     }
   }
   
@@ -27,7 +26,7 @@
       }
     }
     
-    .slider-arrows__right-circle, .slider-arrows__left-circle {
+    .slider-arrows__arrow-left, .slider-arrows__arrow-right {
       @media (min-width: 1282px) and (max-width: 1920px) {
         width: calc(50px * $scope);
         height: calc(50px * $scope);
