@@ -1160,8 +1160,8 @@ body {
 @media (max-width: 532px) {
   .footer {
     max-width: 100vw;
-    -ms-grid-rows: 45.1127819549vw 31.954887218vw 24.4360902256vw;
-    grid-template-rows: 45.1127819549vw 31.954887218vw 24.4360902256vw;
+    -ms-grid-rows: 45.1127819549vw 33.8345864662vw 26.3157894737vw;
+    grid-template-rows: 45.1127819549vw 33.8345864662vw 26.3157894737vw;
     -ms-grid-columns: 5.6390977444vw 2fr 1fr 5.6390977444vw;
     grid-template-columns: 5.6390977444vw 2fr 1fr 5.6390977444vw;
         grid-template-areas: ". form form ." ". socials logo ." ". . copy .";
@@ -1718,8 +1718,8 @@ body {
 @media (max-width: 532px) {
   .footer {
     max-width: 100vw;
-    -ms-grid-rows: 45.1127819549vw 31.954887218vw 24.4360902256vw;
-    grid-template-rows: 45.1127819549vw 31.954887218vw 24.4360902256vw;
+    -ms-grid-rows: 45.1127819549vw 33.8345864662vw 26.3157894737vw;
+    grid-template-rows: 45.1127819549vw 33.8345864662vw 26.3157894737vw;
     -ms-grid-columns: 5.6390977444vw 2fr 1fr 5.6390977444vw;
     grid-template-columns: 5.6390977444vw 2fr 1fr 5.6390977444vw;
         grid-template-areas: ". form form ." ". socials logo ." ". . copy .";

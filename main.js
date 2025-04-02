@@ -1,3 +1,5 @@
+// - - - - - Burger-menu - - - - -
+
 const menuIcon = document.querySelector('.menu-icon'),
   header = document.querySelector('.header');
 
@@ -46,12 +48,12 @@ function showImgArrows(num) {
 
   imgsArrows.forEach((img, index) => {
     switch (index === activeImgArrowIndex) {
-      case false:
-        img.style.display = 'none';
-        break;
-
       case true:
         img.style.display = 'block';
+        break;
+
+      case false:
+        img.style.display = 'none';
     }   
   })
 }
@@ -67,6 +69,8 @@ const sliderDots = document.querySelector('.slider-dots'),
 for (let i = 0; i < imgsDots.length; i++) {
   const dot = document.createElement('button');
   dot.classList.add('slider-dots__nav-item');
+  dot.addEventListener('click', () => showImgDots(i));
+
   navDotsWrap.append(dot);
   navDots.push(dot);
 }
@@ -74,10 +78,6 @@ for (let i = 0; i < imgsDots.length; i++) {
 let activeImgDotsIndex = 0;
 
 showImgDots(0);
-
-navDots.forEach((dot, index) => {
-  dot.addEventListener('click', () => showImgDots(index))
-})
 
 sliderDots.addEventListener('click', e => e.target.tagName === 'IMG' && showImgDots(nextImgIndex()));
 
@@ -92,21 +92,24 @@ function showImgDots(index) {
   activeImgDotsIndex = index;
 
   navDots.forEach((dot, index) => {
-    if (activeImgDotsIndex === index) {
-      dot.classList.add('slider-dots__nav-item_active')
-    } else {
-      dot.classList.remove('slider-dots__nav-item_active')
+    switch (activeImgDotsIndex === index) {
+      case true: 
+        dot.classList.add('slider-dots__nav-item_active');
+        break;
+        
+      case false:
+        dot.classList.remove('slider-dots__nav-item_active')
     }
   })
 
   imgsDots.forEach((img, index) => {
     switch (index === activeImgDotsIndex) {
-      case false:
-        img.style.display = 'none';
-        break;
-
       case true:
         img.style.display = 'block';
+        break;
+
+      case false:
+        img.style.display = 'none';
     }   
   })
 }

@@ -36,7 +36,7 @@
 
   @media (max-width: 532px) {
     max-width: calc(532px * $scope-532);
-    grid-template-rows: calc(240px * $scope-532) calc(170px * $scope-532) calc(130px * $scope-532);
+    grid-template-rows: calc(240px * $scope-532) calc(180px * $scope-532) calc(140px * $scope-532);
     grid-template-columns: calc(30px * $scope-532) 2fr 1fr calc(30px * $scope-532);    
     grid-template-areas:
       ". form form ."
